@@ -1,0 +1,46 @@
+\hypertarget{timer_counter_8c}{}\section{Файл Lib/timer\+Counter.c}
+\label{timer_counter_8c}\index{Lib/timer\+Counter.\+c@{Lib/timer\+Counter.\+c}}
+{\ttfamily \#include \char`\"{}timer\+Counter.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__timer_counter_gae5d2998a498c065480b09bd91826fe60}{timer\+\_\+init}} (\mbox{\hyperlink{group__timer_counter_ga15e57fd0ba6550341fe791c32292bea7}{T\+I\+M\+E\+R\+\_\+\+M\+O\+DE}} timer\+Mode, \mbox{\hyperlink{group__timer_counter_ga57a44f196c24e7284b9a836a60359532}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+DE}} pin\+Mode)
+\begin{DoxyCompactList}\small\item\em Функция инициализации тйамера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga9eb5899834154a7367fe526f519cbb00}{timer\+\_\+set\+Interrupt}} (\mbox{\hyperlink{group__timer_counter_ga2e7008f5da185cf8ce62fb0e5f3079ff}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+PT}} interrupt)
+\begin{DoxyCompactList}\small\item\em Функция включения прерывания \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_gadc97b08f03ca2289d0110b67b9582fd3}{timer\+\_\+reset\+Interrupt}} (\mbox{\hyperlink{group__timer_counter_ga2e7008f5da185cf8ce62fb0e5f3079ff}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+PT}} interrupt)
+\begin{DoxyCompactList}\small\item\em Функция выключения прерывания \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_gafee8b515db2ba6289144f4c927448731}{timer\+\_\+set\+Compare\+Value}} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Функция установки значения в регистр сравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga04ad8cb0a5f2fbb3bb7f544ba86de5d7}{timer\+\_\+set\+Counter\+Value}} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Функция устанавливает текущее значение счётного регистра \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga67dcad411b9845d922ced4c709b2698f}{timer\+\_\+set\+Callback\+Function\+The\+Overflow\+Interrupt}} (void($\ast$callback)(void))
+\begin{DoxyCompactList}\small\item\em Функция установки обработчика прерывания по переполнению \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga5df53b7b2c83f7e7c7211cb469c64998}{timer\+\_\+set\+Callback\+Function\+The\+Compare\+Interrupt}} (void($\ast$callback)(void))
+\begin{DoxyCompactList}\small\item\em Функция установки обработчика прерывания по переполнению \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga2c3327261a8a0b6726fbd8cf67c59036}{timer\+\_\+run}} (\mbox{\hyperlink{group__timer_counter_ga7e6cbe0bc6f3395283c560bdc0690447}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}} prescaler)
+\begin{DoxyCompactList}\small\item\em Функция запуска таймера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga37980fc313f86d7f40a3d7643861ed29}{timer\+\_\+stop}} (void)
+\begin{DoxyCompactList}\small\item\em Функция остановки таймера \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timer_counter_8c_ada481aa6f700b24e2f7cb2bbb6a0227a}{I\+SR}} (T\+I\+M\+E\+R0\+\_\+\+C\+O\+M\+P\+\_\+vect)
+\item 
+\mbox{\hyperlink{timer_counter_8c_add2d7cdddfb682dcc0391e60cf42c7d6}{I\+SR}} (T\+I\+M\+E\+R0\+\_\+\+O\+V\+F\+\_\+vect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{timer_counter_8c_ada481aa6f700b24e2f7cb2bbb6a0227a}\label{timer_counter_8c_ada481aa6f700b24e2f7cb2bbb6a0227a}} 
+\index{timer\+Counter.\+c@{timer\+Counter.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!timer\+Counter.\+c@{timer\+Counter.\+c}}
+\subsubsection{\texorpdfstring{I\+S\+R()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily I\+SR (\begin{DoxyParamCaption}\item[{T\+I\+M\+E\+R0\+\_\+\+C\+O\+M\+P\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{timer_counter_8c_add2d7cdddfb682dcc0391e60cf42c7d6}\label{timer_counter_8c_add2d7cdddfb682dcc0391e60cf42c7d6}} 
+\index{timer\+Counter.\+c@{timer\+Counter.\+c}!I\+SR@{I\+SR}}
+\index{I\+SR@{I\+SR}!timer\+Counter.\+c@{timer\+Counter.\+c}}
+\subsubsection{\texorpdfstring{I\+S\+R()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily I\+SR (\begin{DoxyParamCaption}\item[{T\+I\+M\+E\+R0\+\_\+\+O\+V\+F\+\_\+vect}]{ }\end{DoxyParamCaption})}
+

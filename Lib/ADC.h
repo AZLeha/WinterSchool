@@ -1,40 +1,91 @@
+/*!
+*	\defgroup ADC 	ADC
+*	\ingroup ADC
+* @{
+*/
+
+
+/*!
+*	\file ADC
+*	\brief 	Библиотека для работы c ADC 
+* 	
+*	выавфыафы 
+*/
+
+
+
 #ifndef ADC_H_
 #define ADC_H_
 #include <stdint.h>
 
+/*! 
+ * \brief Причисления для выбора источника напряжения. 
+ *
+ * От выборного источника опорного напряжения зависит качество получаемых данных. Если нет необходимости в точном измерение можно использовать встроенные источники тактирования и откидывать младшие разряды.
+ * Если необходимо получить более точные измерения лучще использовать внешний источник опорного напряжения но при этом обеспечить стабильный уровень напряжения.
+ */
 typedef enum 
 {
-	ADC_VRS_INTERNAL_AREF = 0,
-	ADC_VRS_EXTERNAL_AREF,
-	ADC_VRS_INTERNAL_2_56 = 3
-} ADC_VRS; //ADC voltage reference source
+	ADC_VRS_INTERNAL_AREF = 0, 	//!< Внутренний источник опорного напряжения равный напряжению питания контроллера
+	ADC_VRS_EXTERNAL_AREF,		//!< Внешний источник питания подключенный к выводу микроконтроллера AREF 
+	ADC_VRS_INTERNAL_2_56 = 3	//!< Внутренний источник опорного напряжения с уровнем 2.5 6волта
+} ADC_VRS; 
 
+/*! 
+ * \brief Причисления для выбора канала преобразования. 
+ *
+ * На стенде установлен потенциометр подключенный к выводу PA6.
+ */
 typedef enum
 {
-	ADC_CHANNEL_0 = 0,
-	ADC_CHANNEL_1,
-	ADC_CHANNEL_2,
-	ADC_CHANNEL_3,
-	ADC_CHANNEL_4,
-	ADC_CHANNEL_5,
-	ADC_CHANNEL_6,
-	ADC_CHANNEL_7
-} ADC_CHANNEL; //ADC voltage reference source
+	ADC_CHANNEL_0 = 0,	//!< Соответствует выводу микроконтроллера PA0
+	ADC_CHANNEL_1,		//!< Соответствует выводу микроконтроллера PA1
+	ADC_CHANNEL_2,		//!< Соответствует выводу микроконтроллера PA2
+	ADC_CHANNEL_3,		//!< Соответствует выводу микроконтроллера PA3
+	ADC_CHANNEL_4,		//!< Соответствует выводу микроконтроллера PA4
+	ADC_CHANNEL_5,		//!< Соответствует выводу микроконтроллера PA5
+	ADC_CHANNEL_6,		//!< Соответствует выводу микроконтроллера PA6
+	ADC_CHANNEL_7		//!< Соответствует выводу микроконтроллера PA7
+} ADC_CHANNEL; 
 
+/*! 
+ * \brief Причисления для выбора пред делителя. 
+ *
+ * Так как на схеме выборки присутствует входная ёмкость точность может плавать от скорости преобразования данных.
+ * Соответственно для увеличения точности оцифровки необходимо увеличить время выборки для этого служит делитель 
+ * частоты, данный делитель позволяет снизить скорость тактирования ADC.
+ */
 typedef enum
 {
-	ADC_PRESCALER_2 = 1,
-	ADC_PRESCALER_4,
-	ADC_PRESCALER_8,
-	ADC_PRESCALER_16,
-	ADC_PRESCALER_32,
-	ADC_PRESCALER_64,
-	ADC_PRESCALER_128
-} ADC_PRESCALER; //ADC voltage reference source
+	ADC_PRESCALER_2 = 1,	//!< F_CLK/2
+	ADC_PRESCALER_4,		//!< F_CLK/4
+	ADC_PRESCALER_8,		//!< F_CLK/8
+	ADC_PRESCALER_16,		//!< F_CLK/16
+	ADC_PRESCALER_32,		//!< F_CLK/32
+	ADC_PRESCALER_64,		//!< F_CLK/64
+	ADC_PRESCALER_128		//!< F_CLK/128
+} ADC_PRESCALER; 
 
 
+/*!
+* \brief Функция инициализации ADC
+*
+* Функция позволяет инициализировать ADC с заданными параметрами
+* \param[in] source 	Выбор \link  #ADC_VRS источника опорного напряжения \endlink 
+* \param[in] channel 	Выбор \link  #ADC_CHANNEL канала преобразования \endlink 
+* \param[in] prescaler 	Выбор \link  #ADC_PRESCALER предделителя \endlink 
+*/
 void ADC_Init(ADC_VRS source, ADC_CHANNEL channel, ADC_PRESCALER prescaler);
-uint16_t ADC_Read();
+
+
+/*!
+* \brief Функция чтения ADC
+*
+* Функция осуществляет запуск преобразования дожидается окончания выборки и возвращает оцифрованные данные 
+* \return Возвращает 16-битное значение где первых 10 бит это значения оцифровано сигалаю
+*/
+uint16_t ADC_Read(void);
 
 
 #endif /* ADC_H_ */
+/*! @} */

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PU: Файл Lib/timerCounter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PU
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('timer_counter_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл timerCounter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+</div>
+<p><a href="timer_counter_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga15e57fd0ba6550341fe791c32292bea7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga15e57fd0ba6550341fe791c32292bea7">TIMER_MODE</a> { <a class="el" href="group__timer_counter.html#gga15e57fd0ba6550341fe791c32292bea7a6a1047d7d57a907cc491fc1efeaeb7d1">TIMER_MODE_NORMAL</a> = 0, 
+<a class="el" href="group__timer_counter.html#gga15e57fd0ba6550341fe791c32292bea7ad2107c201a74fb8ba07717dec91d8e62">TIMER_MODE_PHASE_CORRECT_PWM</a>, 
+<a class="el" href="group__timer_counter.html#gga15e57fd0ba6550341fe791c32292bea7a5378d1ebe3379726f217de4b42ba96c9">TIMER_MODE_PHASE_CTC</a>, 
+<a class="el" href="group__timer_counter.html#gga15e57fd0ba6550341fe791c32292bea7ae39b6fee84aef455cc1b3c228f3b64bb">TIMER_MODE_FAST_PWM</a>
+ }</td></tr>
+<tr class="memdesc:ga15e57fd0ba6550341fe791c32292bea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Причисления для выбора режима работы таймера.  <a href="group__timer_counter.html#ga15e57fd0ba6550341fe791c32292bea7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga15e57fd0ba6550341fe791c32292bea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e7008f5da185cf8ce62fb0e5f3079ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga2e7008f5da185cf8ce62fb0e5f3079ff">TIMER_INTRRUPT</a> { <a class="el" href="group__timer_counter.html#gga2e7008f5da185cf8ce62fb0e5f3079ffa0be0ffc6f43d64cc788928c368c5e550">TIMER_INTRRUPT_OVERFLOW</a> = 1, 
+<a class="el" href="group__timer_counter.html#gga2e7008f5da185cf8ce62fb0e5f3079ffa30e164ff279353323fb27a0a58660c53">TIMER_INTRRUPT_COMPARE</a>
+ }</td></tr>
+<tr class="memdesc:ga2e7008f5da185cf8ce62fb0e5f3079ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Причисления с описанием масок разрешения прерываний.  <a href="group__timer_counter.html#ga2e7008f5da185cf8ce62fb0e5f3079ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2e7008f5da185cf8ce62fb0e5f3079ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e6cbe0bc6f3395283c560bdc0690447"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga7e6cbe0bc6f3395283c560bdc0690447">TIMER_PRESCALER</a> { <br />
+&#160;&#160;<a class="el" href="group__timer_counter.html#gga7e6cbe0bc6f3395283c560bdc0690447a1ec6299e655a2c66b52e3b66e25e325f">TIMER_PRESCALER_1</a> = 1, 
+<a class="el" href="group__timer_counter.html#gga7e6cbe0bc6f3395283c560bdc0690447a9b3628a81a43f086a561c2c29653a7aa">TIMER_PRESCALER_8</a>, 
+<a class="el" href="group__timer_counter.html#gga7e6cbe0bc6f3395283c560bdc0690447aae816965a1b2d96c77a50c4aa9078e2b">TIMER_PRESCALER_64</a>, 
+<a class="el" href="group__timer_counter.html#gga7e6cbe0bc6f3395283c560bdc0690447ae875fb53e0b6a6a93793449b8b44eece">TIMER_PRESCALER_256</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__timer_counter.html#gga7e6cbe0bc6f3395283c560bdc0690447a7929d9e16a8ad961303b1a4c029a13fe">TIMER_PRESCALER_1024</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga7e6cbe0bc6f3395283c560bdc0690447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Причисления для выбора делителя на входе таймера.  <a href="group__timer_counter.html#ga7e6cbe0bc6f3395283c560bdc0690447">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7e6cbe0bc6f3395283c560bdc0690447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57a44f196c24e7284b9a836a60359532"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga57a44f196c24e7284b9a836a60359532">TIMER_PIN_OUT_MODE</a> { <a class="el" href="group__timer_counter.html#gga57a44f196c24e7284b9a836a60359532a74862424bd90befcccdae23d32d67b1c">TIMER_PIN_OUT_MODE_DISABEL</a> = 0, 
+<a class="el" href="group__timer_counter.html#gga57a44f196c24e7284b9a836a60359532af2ee5fd011fe5e6e1d5e6fbcff4f04ab">TIMER_PIN_OUT_MODE1</a>, 
+<a class="el" href="group__timer_counter.html#gga57a44f196c24e7284b9a836a60359532a3a74a87ac5b05d0b417dc96b8a398dfa">TIMER_PIN_OUT_MODE2</a>, 
+<a class="el" href="group__timer_counter.html#gga57a44f196c24e7284b9a836a60359532a82902bdaeb9c61b05edadc165d327993">TIMER_PIN_OUT_MODE3</a>
+ }</td></tr>
+<tr class="memdesc:ga57a44f196c24e7284b9a836a60359532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Причисления для выбора режима работы вывода OCn.  <a href="group__timer_counter.html#ga57a44f196c24e7284b9a836a60359532">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga57a44f196c24e7284b9a836a60359532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gae5d2998a498c065480b09bd91826fe60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#gae5d2998a498c065480b09bd91826fe60">timer_init</a> (<a class="el" href="group__timer_counter.html#ga15e57fd0ba6550341fe791c32292bea7">TIMER_MODE</a> timerMode, <a class="el" href="group__timer_counter.html#ga57a44f196c24e7284b9a836a60359532">TIMER_PIN_OUT_MODE</a> pinMode)</td></tr>
+<tr class="memdesc:gae5d2998a498c065480b09bd91826fe60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция инициализации тйамера  <a href="group__timer_counter.html#gae5d2998a498c065480b09bd91826fe60">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae5d2998a498c065480b09bd91826fe60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9eb5899834154a7367fe526f519cbb00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga9eb5899834154a7367fe526f519cbb00">timer_setInterrupt</a> (<a class="el" href="group__timer_counter.html#ga2e7008f5da185cf8ce62fb0e5f3079ff">TIMER_INTRRUPT</a> interrupt)</td></tr>
+<tr class="memdesc:ga9eb5899834154a7367fe526f519cbb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция включения прерывания  <a href="group__timer_counter.html#ga9eb5899834154a7367fe526f519cbb00">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9eb5899834154a7367fe526f519cbb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc97b08f03ca2289d0110b67b9582fd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#gadc97b08f03ca2289d0110b67b9582fd3">timer_resetInterrupt</a> (<a class="el" href="group__timer_counter.html#ga2e7008f5da185cf8ce62fb0e5f3079ff">TIMER_INTRRUPT</a> interrupt)</td></tr>
+<tr class="memdesc:gadc97b08f03ca2289d0110b67b9582fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция выключения прерывания  <a href="group__timer_counter.html#gadc97b08f03ca2289d0110b67b9582fd3">Подробнее...</a><br /></td></tr>
+<tr class="separator:gadc97b08f03ca2289d0110b67b9582fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafee8b515db2ba6289144f4c927448731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#gafee8b515db2ba6289144f4c927448731">timer_setCompareValue</a> (uint8_t value)</td></tr>
+<tr class="memdesc:gafee8b515db2ba6289144f4c927448731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция установки значения в регистр сравнения  <a href="group__timer_counter.html#gafee8b515db2ba6289144f4c927448731">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafee8b515db2ba6289144f4c927448731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04ad8cb0a5f2fbb3bb7f544ba86de5d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga04ad8cb0a5f2fbb3bb7f544ba86de5d7">timer_setCounterValue</a> (uint8_t value)</td></tr>
+<tr class="memdesc:ga04ad8cb0a5f2fbb3bb7f544ba86de5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция устанавливает текущее значение счётного регистра  <a href="group__timer_counter.html#ga04ad8cb0a5f2fbb3bb7f544ba86de5d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga04ad8cb0a5f2fbb3bb7f544ba86de5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67dcad411b9845d922ced4c709b2698f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga67dcad411b9845d922ced4c709b2698f">timer_setCallbackFunctionTheOverflowInterrupt</a> (void(*callback)(void))</td></tr>
+<tr class="memdesc:ga67dcad411b9845d922ced4c709b2698f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция установки обработчика прерывания по переполнению  <a href="group__timer_counter.html#ga67dcad411b9845d922ced4c709b2698f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga67dcad411b9845d922ced4c709b2698f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5df53b7b2c83f7e7c7211cb469c64998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga5df53b7b2c83f7e7c7211cb469c64998">timer_setCallbackFunctionTheCompareInterrupt</a> (void(*callback)(void))</td></tr>
+<tr class="memdesc:ga5df53b7b2c83f7e7c7211cb469c64998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция установки обработчика прерывания по переполнению  <a href="group__timer_counter.html#ga5df53b7b2c83f7e7c7211cb469c64998">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5df53b7b2c83f7e7c7211cb469c64998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c3327261a8a0b6726fbd8cf67c59036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga2c3327261a8a0b6726fbd8cf67c59036">timer_run</a> (<a class="el" href="group__timer_counter.html#ga7e6cbe0bc6f3395283c560bdc0690447">TIMER_PRESCALER</a> prescaler)</td></tr>
+<tr class="memdesc:ga2c3327261a8a0b6726fbd8cf67c59036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция запуска таймера  <a href="group__timer_counter.html#ga2c3327261a8a0b6726fbd8cf67c59036">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2c3327261a8a0b6726fbd8cf67c59036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37980fc313f86d7f40a3d7643861ed29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__timer_counter.html#ga37980fc313f86d7f40a3d7643861ed29">timer_stop</a> (void)</td></tr>
+<tr class="memdesc:ga37980fc313f86d7f40a3d7643861ed29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция остановки таймера  <a href="group__timer_counter.html#ga37980fc313f86d7f40a3d7643861ed29">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga37980fc313f86d7f40a3d7643861ed29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_8f3de2ae926fecfe6abd5379fd2b6eb1.html">Lib</a></li><li class="navelem"><a class="el" href="timer_counter_8h.html">timerCounter.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

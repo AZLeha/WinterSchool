@@ -1,0 +1,52 @@
+\hypertarget{timer_counter_8h}{}\section{Файл Lib/timer\+Counter.h}
+\label{timer_counter_8h}\index{Lib/timer\+Counter.\+h@{Lib/timer\+Counter.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__timer_counter_ga15e57fd0ba6550341fe791c32292bea7}{T\+I\+M\+E\+R\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{group__timer_counter_gga15e57fd0ba6550341fe791c32292bea7a6a1047d7d57a907cc491fc1efeaeb7d1}{T\+I\+M\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}} = 0, 
+\mbox{\hyperlink{group__timer_counter_gga15e57fd0ba6550341fe791c32292bea7ad2107c201a74fb8ba07717dec91d8e62}{T\+I\+M\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+H\+A\+S\+E\+\_\+\+C\+O\+R\+R\+E\+C\+T\+\_\+\+P\+WM}}, 
+\mbox{\hyperlink{group__timer_counter_gga15e57fd0ba6550341fe791c32292bea7a5378d1ebe3379726f217de4b42ba96c9}{T\+I\+M\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+P\+H\+A\+S\+E\+\_\+\+C\+TC}}, 
+\mbox{\hyperlink{group__timer_counter_gga15e57fd0ba6550341fe791c32292bea7ae39b6fee84aef455cc1b3c228f3b64bb}{T\+I\+M\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+F\+A\+S\+T\+\_\+\+P\+WM}}
+ \}
+\begin{DoxyCompactList}\small\item\em Причисления для выбора режима работы таймера. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__timer_counter_ga2e7008f5da185cf8ce62fb0e5f3079ff}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+PT}} \{ \mbox{\hyperlink{group__timer_counter_gga2e7008f5da185cf8ce62fb0e5f3079ffa0be0ffc6f43d64cc788928c368c5e550}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+P\+T\+\_\+\+O\+V\+E\+R\+F\+L\+OW}} = 1, 
+\mbox{\hyperlink{group__timer_counter_gga2e7008f5da185cf8ce62fb0e5f3079ffa30e164ff279353323fb27a0a58660c53}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+P\+T\+\_\+\+C\+O\+M\+P\+A\+RE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Причисления с описанием масок разрешения прерываний. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__timer_counter_ga7e6cbe0bc6f3395283c560bdc0690447}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}} \{ \newline
+\mbox{\hyperlink{group__timer_counter_gga7e6cbe0bc6f3395283c560bdc0690447a1ec6299e655a2c66b52e3b66e25e325f}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+1}} = 1, 
+\mbox{\hyperlink{group__timer_counter_gga7e6cbe0bc6f3395283c560bdc0690447a9b3628a81a43f086a561c2c29653a7aa}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+8}}, 
+\mbox{\hyperlink{group__timer_counter_gga7e6cbe0bc6f3395283c560bdc0690447aae816965a1b2d96c77a50c4aa9078e2b}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+64}}, 
+\mbox{\hyperlink{group__timer_counter_gga7e6cbe0bc6f3395283c560bdc0690447ae875fb53e0b6a6a93793449b8b44eece}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+256}}, 
+\newline
+\mbox{\hyperlink{group__timer_counter_gga7e6cbe0bc6f3395283c560bdc0690447a7929d9e16a8ad961303b1a4c029a13fe}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E\+R\+\_\+1024}}
+ \}
+\begin{DoxyCompactList}\small\item\em Причисления для выбора делителя на входе таймера. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__timer_counter_ga57a44f196c24e7284b9a836a60359532}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{group__timer_counter_gga57a44f196c24e7284b9a836a60359532a74862424bd90befcccdae23d32d67b1c}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+EL}} = 0, 
+\mbox{\hyperlink{group__timer_counter_gga57a44f196c24e7284b9a836a60359532af2ee5fd011fe5e6e1d5e6fbcff4f04ab}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E1}}, 
+\mbox{\hyperlink{group__timer_counter_gga57a44f196c24e7284b9a836a60359532a3a74a87ac5b05d0b417dc96b8a398dfa}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E2}}, 
+\mbox{\hyperlink{group__timer_counter_gga57a44f196c24e7284b9a836a60359532a82902bdaeb9c61b05edadc165d327993}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+D\+E3}}
+ \}
+\begin{DoxyCompactList}\small\item\em Причисления для выбора режима работы вывода O\+Cn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__timer_counter_gae5d2998a498c065480b09bd91826fe60}{timer\+\_\+init}} (\mbox{\hyperlink{group__timer_counter_ga15e57fd0ba6550341fe791c32292bea7}{T\+I\+M\+E\+R\+\_\+\+M\+O\+DE}} timer\+Mode, \mbox{\hyperlink{group__timer_counter_ga57a44f196c24e7284b9a836a60359532}{T\+I\+M\+E\+R\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+\+M\+O\+DE}} pin\+Mode)
+\begin{DoxyCompactList}\small\item\em Функция инициализации тйамера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga9eb5899834154a7367fe526f519cbb00}{timer\+\_\+set\+Interrupt}} (\mbox{\hyperlink{group__timer_counter_ga2e7008f5da185cf8ce62fb0e5f3079ff}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+PT}} interrupt)
+\begin{DoxyCompactList}\small\item\em Функция включения прерывания \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_gadc97b08f03ca2289d0110b67b9582fd3}{timer\+\_\+reset\+Interrupt}} (\mbox{\hyperlink{group__timer_counter_ga2e7008f5da185cf8ce62fb0e5f3079ff}{T\+I\+M\+E\+R\+\_\+\+I\+N\+T\+R\+R\+U\+PT}} interrupt)
+\begin{DoxyCompactList}\small\item\em Функция выключения прерывания \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_gafee8b515db2ba6289144f4c927448731}{timer\+\_\+set\+Compare\+Value}} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Функция установки значения в регистр сравнения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga04ad8cb0a5f2fbb3bb7f544ba86de5d7}{timer\+\_\+set\+Counter\+Value}} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Функция устанавливает текущее значение счётного регистра \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga67dcad411b9845d922ced4c709b2698f}{timer\+\_\+set\+Callback\+Function\+The\+Overflow\+Interrupt}} (void($\ast$callback)(void))
+\begin{DoxyCompactList}\small\item\em Функция установки обработчика прерывания по переполнению \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga5df53b7b2c83f7e7c7211cb469c64998}{timer\+\_\+set\+Callback\+Function\+The\+Compare\+Interrupt}} (void($\ast$callback)(void))
+\begin{DoxyCompactList}\small\item\em Функция установки обработчика прерывания по переполнению \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga2c3327261a8a0b6726fbd8cf67c59036}{timer\+\_\+run}} (\mbox{\hyperlink{group__timer_counter_ga7e6cbe0bc6f3395283c560bdc0690447}{T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+S\+C\+A\+L\+ER}} prescaler)
+\begin{DoxyCompactList}\small\item\em Функция запуска таймера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__timer_counter_ga37980fc313f86d7f40a3d7643861ed29}{timer\+\_\+stop}} (void)
+\begin{DoxyCompactList}\small\item\em Функция остановки таймера \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{_l_c_d_8c}{}\section{Файл Lib/\+L\+CD.c}
+\label{_l_c_d_8c}\index{Lib/\+L\+C\+D.\+c@{Lib/\+L\+C\+D.\+c}}
+{\ttfamily \#include \char`\"{}L\+C\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8c_a90eca0dabafb7ac9df2bc6542bfceb75}{L\+C\+D\+\_\+\+IR}}~0
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8c_a56d3baea179f514efddbccbc3b64104b}{L\+C\+D\+\_\+\+DR}}~1
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8c_a4781e073871c6f27f89b9463ad3a4ed1}{L\+C\+D\+\_\+\+RS}}~0x10
+\item 
+\#define \mbox{\hyperlink{_l_c_d_8c_a6ec15b1e813d1f56d2eb644a127e5d49}{L\+C\+D\+\_\+E}}~0x20
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_l_c_d_8c_aea7ccb1f68c35c1ace876675a6c406d7}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((always\+\_\+inline))
+\item 
+void \mbox{\hyperlink{group___l_c_d_gab0bfa8e6a5ecf32e685152b5c6cf4868}{L\+C\+D\+\_\+\+Write\+Char}} (char data)
+\begin{DoxyCompactList}\small\item\em Функция вывода одного символа на экран \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d_ga3f2811cf6b42d44a54d3ec825ed04872}{L\+C\+D\+\_\+\+Write\+String}} (char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Функция вывода строки на L\+CD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d_ga37d2c714c039facd26673a1d46327048}{L\+C\+D\+\_\+\+Write\+Int}} (int data)
+\begin{DoxyCompactList}\small\item\em Функция вывода целочисленного числа на экран \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d_gae60d0b62d7eb3fa31266c095d7b3c245}{L\+C\+D\+\_\+\+Clear}} ()
+\begin{DoxyCompactList}\small\item\em Функция очистки экрана \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d_ga9cb99b2bea272c3cf14ddd5679481398}{L\+C\+D\+\_\+\+Set\+Cursor}} (uint8\+\_\+t row, uint8\+\_\+t column)
+\begin{DoxyCompactList}\small\item\em Функция установки курсора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{_l_c_d_8c_a56d3baea179f514efddbccbc3b64104b}\label{_l_c_d_8c_a56d3baea179f514efddbccbc3b64104b}} 
+\index{L\+C\+D.\+c@{L\+C\+D.\+c}!L\+C\+D\+\_\+\+DR@{L\+C\+D\+\_\+\+DR}}
+\index{L\+C\+D\+\_\+\+DR@{L\+C\+D\+\_\+\+DR}!L\+C\+D.\+c@{L\+C\+D.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+DR}{LCD\_DR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+DR~1}
+
+\mbox{\Hypertarget{_l_c_d_8c_a6ec15b1e813d1f56d2eb644a127e5d49}\label{_l_c_d_8c_a6ec15b1e813d1f56d2eb644a127e5d49}} 
+\index{L\+C\+D.\+c@{L\+C\+D.\+c}!L\+C\+D\+\_\+E@{L\+C\+D\+\_\+E}}
+\index{L\+C\+D\+\_\+E@{L\+C\+D\+\_\+E}!L\+C\+D.\+c@{L\+C\+D.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+E}{LCD\_E}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+E~0x20}
+
+\mbox{\Hypertarget{_l_c_d_8c_a90eca0dabafb7ac9df2bc6542bfceb75}\label{_l_c_d_8c_a90eca0dabafb7ac9df2bc6542bfceb75}} 
+\index{L\+C\+D.\+c@{L\+C\+D.\+c}!L\+C\+D\+\_\+\+IR@{L\+C\+D\+\_\+\+IR}}
+\index{L\+C\+D\+\_\+\+IR@{L\+C\+D\+\_\+\+IR}!L\+C\+D.\+c@{L\+C\+D.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+IR}{LCD\_IR}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+IR~0}
+
+\mbox{\Hypertarget{_l_c_d_8c_a4781e073871c6f27f89b9463ad3a4ed1}\label{_l_c_d_8c_a4781e073871c6f27f89b9463ad3a4ed1}} 
+\index{L\+C\+D.\+c@{L\+C\+D.\+c}!L\+C\+D\+\_\+\+RS@{L\+C\+D\+\_\+\+RS}}
+\index{L\+C\+D\+\_\+\+RS@{L\+C\+D\+\_\+\+RS}!L\+C\+D.\+c@{L\+C\+D.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+RS}{LCD\_RS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+RS~0x10}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_l_c_d_8c_aea7ccb1f68c35c1ace876675a6c406d7}\label{_l_c_d_8c_aea7ccb1f68c35c1ace876675a6c406d7}} 
+\index{L\+C\+D.\+c@{L\+C\+D.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!L\+C\+D.\+c@{L\+C\+D.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(always\+\_\+inline)}]{ }\end{DoxyParamCaption})}
+
